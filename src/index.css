@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import "node_modules/locomotive-scroll/dist/locomotive-scroll";
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --bg-primary-color: #fff;
+  --bg-secondary-color: #faf7eb;
+
+  --text-primary-color: #1a1a1a;
+  --text-secondary-color: #666666;
+
+  --space-xs: 0.8rem;
+  --space-sm: 1.5rem;
+  --space-md: 2rem;
+  --space-lg: 2.5rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 5rem;
+
+  --font-size-xs: 1rem;
+  --font-size-sm: 1.2rem;
+  --font-size-md: 1.5rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.5rem;
+  --font-size-2xl: 3rem;
+  --font-size-3xl: 4rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --br-xs: 4px;
+  --br-sm: 8px;
+  --br-md: 12px;
+  --br-lg: 16px;
+  --br-xl: 20px;
+  --br-2xl: 24px;
+  --br-3xl: 28px;
+  --br-4xl: 32px;
+}
