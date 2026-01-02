@@ -45,7 +45,7 @@ const Hero = () => {
     <motion.section
       ref={containerRef}
       style={{ paddingInline, borderRadius }}
-      className="h-screen relative"
+      className="h-screen relative mt-20"
     >
       <motion.img
         className="w-full h-full object-cover border-2 border-gray-200"

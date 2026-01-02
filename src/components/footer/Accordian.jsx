@@ -7,7 +7,7 @@ const AccordianSection = () => {
       <h1 className="text-[2vw] text-black font-bold">
         Sunday AI - Frequently Asked Questions
       </h1>
-      <div class="space-y-2 w-1/2 mx-auto">
+      <div className="space-y-2 w-1/2 mx-auto">
         <Accordian
           title="What are the basic features?"
           desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt

@@ -6,14 +6,19 @@ const MemoKitchen = () => {
   return (
     <div className="min-h-screen px-6 text-black">
       <div className="aspect-[16/9] rounded-xl relative">
-        <img
-          className="w-full h-full object-cover rounded-xl"
-          src="https://imgs.search.brave.com/S9efKqqy4ABBxxXRJbAShCC_fq1JcRdfP68wdObWgbQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/c3VuZGF5LXJvYm90/aWNzLWp1c3QtaW50/cm9kdWNlZC1hY3Qt/MS1hLWZyb250aWVy/LWZvdW5kYXRpb24t/djAtOGRjd2c1cnpn/aDJnMS5qcGVnP2F1/dG89d2VicCZzPTc4/MDE2ODY5MDgwN2Ez/YzYyZmZhMTI1Nzc1/NTdlOGVkOWM4ODJl/Yjg"
-          alt=""
+        <TiltedCard
+          imageSrc="https://imgs.search.brave.com/S9efKqqy4ABBxxXRJbAShCC_fq1JcRdfP68wdObWgbQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wcmV2/aWV3LnJlZGQuaXQv/c3VuZGF5LXJvYm90/aWNzLWp1c3QtaW50/cm9kdWNlZC1hY3Qt/MS1hLWZyb250aWVy/LWZvdW5kYXRpb24t/djAtOGRjd2c1cnpn/aDJnMS5qcGVnP2F1/dG89d2VicCZzPTc4/MDE2ODY5MDgwN2Ez/YzYyZmZhMTI1Nzc1/NTdlOGVkOWM4ODJl/Yjg"
+          altText="Kendrick Lamar - GNX Album Cover"
+          containerHeight="100%"
+          containerWidth="100%"
+          imageHeight="100%"
+          imageWidth="100%"
+          rotateAmplitude={12}
+          scaleOnHover={0.55}
+          showMobileWarning={false}
+          showTooltip={false}
+          displayOverlayContent={true}
         />
-        <h2 className="h-full w-full leading-none uppercase flex items-center justify-center bg-black/20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-[4vw] font-bold rounded-xl">
-          Memo works in the kitchen
-        </h2>
       </div>
       <div className="h-[60vh] w-full mt-6 flex items-center justify-center gap-2">
         <div className="w-1/2 h-full bg-[#faf7eb] flex flex-col justify-between border border-black/50 rounded-xl p-4">
@@ -45,8 +50,8 @@ const MemoKitchen = () => {
             rotateAmplitude={12}
             scaleOnHover={0.95}
             showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
+            showTooltip={false}
+            displayOverlayContent={false}
           />
         </div>
       </div>

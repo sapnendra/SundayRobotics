@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "./navbar.module.scss";
 import Logo from "../logo/Logo";
-import TrueFocus from "../../react-bits/TrueFocus";
 import {
   AnimatePresence,
   motion,
@@ -25,7 +24,7 @@ const Navbar = () => {
   });
 
   const handleHamburgerMenu = () => {
-    setIsOpen(!isOpen);
+    console.log("Hello");
   };
 
   const opacity = useTransform(scrollY, [600, 800], [1, 0]);
@@ -38,76 +37,12 @@ const Navbar = () => {
         transition={{ duration: 0.2, ease: "easeInOut" }}
       >
         <AnimatePresence>
-          <motion.div
-            key={1}
-            animate={{ scale: isOpen ? 0 : 1 }}
-            transition={{ duration: 0.2 }}
-            className={`${styles.navContainer}`}
-          >
+          <motion.div key={1} className={`${styles.navContainer}`}>
             <Logo />
             <button className={`${styles.navButton} text-black`}>Sunday</button>
             <div onClick={handleHamburgerMenu} className={styles.hamburgerMenu}>
               <motion.span className={styles.hamburgerMenuSpan}></motion.span>
               <motion.span className={styles.hamburgerMenuSpan}></motion.span>
-            </div>
-          </motion.div>
-          <motion.div
-            key={2}
-            animate={{ scale: isOpen ? 1 : 0 }}
-            transition={{ duration: 0.2 }}
-            className={`${styles.bigNavContainer} absolute top-6 left-1/2 -translate-x-1/2`}
-          >
-            <div className="flex items-center justify-between text-black">
-              <Logo />
-              <button className={`${styles.navButton} text-black`}>
-                Sunday
-              </button>
-              <div
-                onClick={handleHamburgerMenu}
-                className={styles.hamburgerMenu}
-              >
-                <motion.span
-                  animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 3.5 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`${styles.hamburgerMenuSpan}`}
-                ></motion.span>
-                <motion.span
-                  animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -3.5 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className={`${styles.hamburgerMenuSpan}`}
-                ></motion.span>
-              </div>
-            </div>
-            <div className="w-full flex py-10">
-              <div className="left w-2/3">
-                <h4 className="text-2xl text-black mb-2 cursor-pointer">
-                  Technology
-                </h4>
-                <h4 className="text-2xl text-black mb-2 cursor-pointer">
-                  Business
-                </h4>
-                <h4 className="text-2xl text-black mb-2 cursor-pointer">
-                  Entertainment
-                </h4>
-                <h4 className="text-2xl text-black mb-2 cursor-pointer">
-                  Health
-                </h4>
-                <h4 className="text-2xl text-black mb-2 cursor-pointer">
-                  Science
-                </h4>
-              </div>
-              <div className="right w-2/3">
-                <img
-                  className="w-full h-full object-cover rounded-xl"
-                  src="/thumbnail.webp"
-                  alt="thumbnail"
-                />
-              </div>
-            </div>
-            <div className="flex items-center justify-between text-black/50">
-              <p>Lorem, ipsum dolor</p>
-              <p>Lorem ipsum</p>
-              <p>Lorem ipsum</p>
             </div>
           </motion.div>
         </AnimatePresence>
@@ -126,14 +61,7 @@ const Navbar = () => {
 
         <div className="flex items-center justify-center">
           <h1 className="text-[8vw] pt-10 leading-none text-black mix-blend-difference font-semibold leading-tighter tracking-normal">
-            <TrueFocus
-              sentence="Say Hello, Memo"
-              manualMode={true}
-              blurAmount={7}
-              borderColor="#EF5F27"
-              animationDuration={0.5}
-              pauseBetweenAnimations={1}
-            />
+            Say Hello to Memo
           </h1>
         </div>
       </motion.div>
