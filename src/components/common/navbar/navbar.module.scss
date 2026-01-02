@@ -50,11 +50,11 @@
     justify-content: space-between;
     height: 10px;
     cursor: pointer;
-
+    
     .hamburgerMenuSpan {
       width: 20px;
       height: 2px;
-      background-color: var(--text-primary-color);
+      background-color: #000000;
       border-radius: var(--br-xs);
     }
   }

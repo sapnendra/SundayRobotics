@@ -36,17 +36,17 @@ const Magic = () => {
   return (
     <div
       ref={sectionRef}
-      className="h-screen w-full flex flex-col items-center justify-center overflow-hidden relative"
+      className="h-screen bg- w-full flex flex-col items-center justify-center overflow-hidden relative"
     >
       <div
         ref={containerRef}
-        className="flex gap-4 items-center justify-center text-[7vw] font-bold leading-none"
+        className="flex gap-4 items-center justify-center text-[7vw] font-bold leading-none text-sm text-black"
       >
-        <h1>Mundane</h1>
-        <h1 ref={text2Ref}>made</h1>
-        <h1 ref={text3Ref}>magic</h1>
+        <h1 className="cursor-target">Mundane</h1>
+        <h1 className="cursor-target" ref={text2Ref}>made</h1>
+        <h1 className="cursor-target" ref={text3Ref}>magic</h1>
       </div>
-      <div className="w-[40%] h-[60%] flex items-end justify-center mx-auto text-center text-[1.4vw] font-semibold">
+      <div className="w-[40%] h-[60%] flex items-end justify-center mx-auto text-center text-[1.4vw] font-semibold text-black">
         <p className="">
           Powered by state-of-the-art AI models and an ever-expanding Skill
           Library, Memo doesn't just know how to do a few tasks—Memo improves

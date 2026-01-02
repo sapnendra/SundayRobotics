@@ -58,7 +58,7 @@ const Hero = () => {
         ref={ctxRef}
         className="sticky bottom-8 w-fit px-5 py-4 rounded-full bg-[#f7e731] mx-auto flex items-center justify-between gap-3"
       >
-        <p className="text-sm tracking-widest font-semibold">
+        <p className="text-sm text-black tracking-widest font-semibold">
           Join the Founding Family
         </p>
         <p className="text-sm tracking-widest text-black/50 font-sm flex items-center gap-1">

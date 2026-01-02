@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const Footer2 = () => {
   return (
-    <div className="h-[80vh] w-full my-20 flex items-center justify-center">
+    <div className="h-[80vh] w-full my-20 flex items-center justify-center text-black">
       <div className="h-[80%] w-full flex flex-col items-center justify-center py-15 bg-[#D9ECEE]">
         <div className="w-full h-full flex items-center justify-between px-30">
           <h2 className="text-[1.7vw] font-semibold">Memo wears many hats.</h2>

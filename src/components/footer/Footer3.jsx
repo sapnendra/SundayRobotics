@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import GlareHover from "../react-bits/GlareHover";
+import TrueFocus from "../react-bits/TrueFocus";
 
 const Footer3 = () => {
   const containerRef = useRef(null);
@@ -16,8 +18,6 @@ const Footer3 = () => {
     ["0px", "30px"]
   );
   const borderRadius = useTransform(scrollYProgress, [0.6, 1], ["0px", "20px"]);
-  const height = useTransform(scrollYProgress, [0.6, 1], ["0px", "400px"]);
-  const text = useTransform(scrollYProgress, [0.6, 1], ["1vw", "15vw"]);
 
   return (
     <motion.div
@@ -138,12 +138,11 @@ const Footer3 = () => {
           </div>
         </div>
       </motion.div>
-      <motion.h1
-        className="w-full flex items-center justify-center font-bold uppercase leading-none"
-        style={{ height, fontSize: text }}
-      >
-        Sheryians
-      </motion.h1>
+      <GlareHover glareColor="#F7E83C" transitionDuration="1000" className="">
+        <h1 className="w-full flex items-center h-[400px] text-[15vw] justify-center text-black font-bold uppercase leading-none">
+          Sheryians
+        </h1>
+      </GlareHover>
     </motion.div>
   );
 };

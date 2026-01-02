@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./navbar.module.scss";
 import Logo from "../logo/Logo";
+import TrueFocus from "../../react-bits/TrueFocus";
 import {
   AnimatePresence,
   motion,
@@ -44,7 +45,7 @@ const Navbar = () => {
             className={`${styles.navContainer}`}
           >
             <Logo />
-            <button className={styles.navButton}>Sunday</button>
+            <button className={`${styles.navButton} text-black`}>Sunday</button>
             <div onClick={handleHamburgerMenu} className={styles.hamburgerMenu}>
               <motion.span className={styles.hamburgerMenuSpan}></motion.span>
               <motion.span className={styles.hamburgerMenuSpan}></motion.span>
@@ -56,9 +57,11 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
             className={`${styles.bigNavContainer} absolute top-6 left-1/2 -translate-x-1/2`}
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between text-black">
               <Logo />
-              <button className={styles.navButton}>Sunday</button>
+              <button className={`${styles.navButton} text-black`}>
+                Sunday
+              </button>
               <div
                 onClick={handleHamburgerMenu}
                 className={styles.hamburgerMenu}
@@ -77,11 +80,21 @@ const Navbar = () => {
             </div>
             <div className="w-full flex py-10">
               <div className="left w-2/3">
-                <h4 className="text-2xl mb-2 cursor-pointer">Technology</h4>
-                <h4 className="text-2xl mb-2 cursor-pointer">Business</h4>
-                <h4 className="text-2xl mb-2 cursor-pointer">Entertainment</h4>
-                <h4 className="text-2xl mb-2 cursor-pointer">Health</h4>
-                <h4 className="text-2xl mb-2 cursor-pointer">Science</h4>
+                <h4 className="text-2xl text-black mb-2 cursor-pointer">
+                  Technology
+                </h4>
+                <h4 className="text-2xl text-black mb-2 cursor-pointer">
+                  Business
+                </h4>
+                <h4 className="text-2xl text-black mb-2 cursor-pointer">
+                  Entertainment
+                </h4>
+                <h4 className="text-2xl text-black mb-2 cursor-pointer">
+                  Health
+                </h4>
+                <h4 className="text-2xl text-black mb-2 cursor-pointer">
+                  Science
+                </h4>
               </div>
               <div className="right w-2/3">
                 <img
@@ -107,13 +120,20 @@ const Navbar = () => {
         transition={{ duration: 0.3, ease: "linear" }}
       >
         <div className="flex flex-col items-center justify-between">
-          <p className="text-md">The helpful home robot</p>
+          <p className="text-md text-black">The helpful home robot</p>
           <p className="text-lg text-black/50">Beta launching late 2026</p>
         </div>
 
         <div className="flex items-center justify-center">
-          <h1 className="text-[8vw] text-black mix-blend-difference font-semibold leading-tighter tracking-normal">
-            Say hello to Memo
+          <h1 className="text-[8vw] pt-10 leading-none text-black mix-blend-difference font-semibold leading-tighter tracking-normal">
+            <TrueFocus
+              sentence="Say Hello, Memo"
+              manualMode={true}
+              blurAmount={7}
+              borderColor="#EF5F27"
+              animationDuration={0.5}
+              pauseBetweenAnimations={1}
+            />
           </h1>
         </div>
       </motion.div>

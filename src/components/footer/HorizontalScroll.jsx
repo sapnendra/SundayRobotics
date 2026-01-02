@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const Footer1 = () => {
+const HorizontalScroll = () => {
   const containerRef = useRef(null);
   const sectionRef = useRef(null);
 
@@ -33,7 +33,7 @@ const Footer1 = () => {
   });
 
   return (
-    <div className="h-[150vh] w-full px-6 flex items-end" ref={containerRef}>
+    <div className="h-[150vh] w-full px-6 flex items-end text-black" ref={containerRef}>
       <div className="h-screen w-full flex flex-col items-center justify-between">
         <h2 className="w-full flex items-center justify-center text-[8vw] text-center font-bold leading-none py-10">
           Designed for reeal use
@@ -123,4 +123,4 @@ const Footer1 = () => {
   );
 };
 
-export default Footer1;
+export default HorizontalScroll;

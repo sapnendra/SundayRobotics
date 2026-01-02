@@ -6,19 +6,24 @@ import About from "./components/about/About";
 import Lenis from "lenis";
 import Magic from "./components/magic/Magic";
 import MemoKitchen from "./components/memoworks/MemoKitchen";
-import LocomotiveScroll from 'locomotive-scroll';
-import {motion, useScroll, useTransform} from "motion/react";
+import LocomotiveScroll from "locomotive-scroll";
+import { motion, useScroll, useTransform } from "motion/react";
 import MemoHomes from "./components/memoworks/MemoHomes";
 import MemoLearning from "./components/memoworks/MemoLearning";
 import Intuition from "./components/intuition/Intuition";
-import Footer1 from "./components/footer/Footer1";
 import Footer2 from "./components/footer/Footer2";
 import Footer3 from "./components/footer/Footer3";
+import SpeedAction from "./components/daisyui/SpeedAction";
+import HorizontalScroll from "./components/footer/HorizontalScroll";
+import AccordianSection from "./components/footer/Accordian";
 
 const App = () => {
-
-  const {scrollY} = useScroll();
-  const backgroundColor = useTransform(scrollY, [1050, 2200], ["#ffffffff", "#fffae6ff"]);
+  const { scrollY } = useScroll();
+  const backgroundColor = useTransform(
+    scrollY,
+    [1050, 2200],
+    ["#ffffffff", "#fffae6ff"]
+  );
 
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
@@ -36,7 +41,10 @@ const App = () => {
   }, []);
 
   return (
-    <motion.main className={`${styles.main} select-none`} style={{backgroundColor}}>
+    <motion.main
+      className={`${styles.main} select-none`}
+      style={{ backgroundColor }}
+    >
       <Navbar />
       <Hero />
       <About />
@@ -45,9 +53,11 @@ const App = () => {
       <MemoHomes />
       <MemoLearning />
       <Intuition />
-      <Footer1 />
+      <HorizontalScroll />
+      <AccordianSection />
       <Footer2 />
       <Footer3 />
+      <SpeedAction />
     </motion.main>
   );
 };
